@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Formulário E2E Treinamentos</title>
+   <style>
+    body{
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    form{
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    label{
+        display: block;
+        margin-top: 10px;
+    }
+
+    input {
+      width: 100%; 
+      padding: 5px; 
+      margin-top: 5px;
+    }
+
+    button{
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+   </style> 
+</head>
+
+
+
+
+<body>
+<h1>Formulário E2E Treinamentos</h1> 
+
+<form id="cadastroForm">
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome">
+    <label for="sobrenome">Sobrenome: </label>
+    <input type="text" id="sobrenome">
+    <label for="dataNascimento">Data de Nascimento: </label>
+    <input type="date" id="dataNascimento"> 
+    <label for="whatsApp">WhatsApp: </label>
+    <input type="tel" id ="whatsApp">
+    <button type="submit">Cadastrar </button>
+</form>
+
+<script>
+    document.getElementById("cadastroForm").addEventListener("submit", function(event){
+        event.preventDefault();
+
+        //Capturamos as informações preenchidas e guardamos em variáveis
+        var nome = document.getElementById("nome").value;
+        var sobrenome = document.getElementById("sobrenome").value;
+        var dataNascimento = document.getElementById("dataNascimento").value;
+        var whatsApp = document.getElementById("whatsApp").value;
+
+        //Exibir as informações salvas em um alert
+        var mensagem = "Cadastro realizado com sucesso! \n\n";
+        mensagem += "Nome: " + nome + "\n";
+        mensagem += "Sobrenome: " + sobrenome + "\n";
+        mensagem += "Data nascimento: " + dataNascimento + "\n";
+        mensagem += "WhatsApp: " + whatsApp + "\n";
+        alert(mensagem)
+
+    });
+</script>
+
+</body>
+
+
+
+
+</html>
